@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma de Capacitación - Transformación a Value Streams</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gantt-grid {
+            display: grid;
+            grid-template-columns: 250px repeat(6, 1fr);
+            gap: 4px;
+        }
+        .gantt-header {
+            text-align: center;
+            font-weight: bold;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            background-color: #F9FAFB;
+            z-index: 10;
+        }
+        .gantt-task-name {
+            padding: 0.5rem;
+            font-size: 0.875rem;
+            border-right: 1px solid #E5E7EB;
+        }
+        .gantt-bar-container {
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+            grid-column: 2 / -1;
+            align-items: center;
+        }
+        .gantt-bar {
+            height: 24px;
+            border-radius: 4px;
+            color: white;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <header class="text-center mb-8 border-b pb-4">
+            <h1 class="text-3xl font-black text-[#003F5C]">Cronograma de Implementación del Plan de Capacitación</h1>
+            <p class="text-lg text-[#374C80] mt-1">Un Enfoque Evolutivo para la Transformación a Value Streams</p>
+        </header>
+
+        <div class="mb-8">
+            <h2 class="text-xl font-bold text-[#003F5C] mb-3">Filosofía del Cronograma</h2>
+            <p class="text-gray-600">Este cronograma está diseñado para construir el conocimiento de manera incremental. Se inicia con los <span class="font-semibold text-[#7A5195]">fundamentos culturales y de mentalidad</span>, para luego introducir las <span class="font-semibold text-[#EF5675]">herramientas de visualización y mejora</span>. Finalmente, se culmina con <span class="font-semibold text-[#FFA600]">capacidades avanzadas</span> que aseguran la autonomía y sostenibilidad de los equipos. Las habilidades blandas y técnicas se entrelazan para reforzarse mutuamente a lo largo del proceso.</p>
+        </div>
+        
+        <div class="overflow-x-auto">
+            <div class="gantt-grid min-w-[1000px]">
+                <!-- Headers -->
+                <div class="gantt-header border-b-2">Módulo de Capacitación</div>
+                <div class="gantt-header border-b-2">Oct 2025</div>
+                <div class="gantt-header border-b-2">Nov 2025</div>
+                <div class="gantt-header border-b-2">Dic 2025</div>
+                <div class="gantt-header border-b-2">Ene 2026</div>
+                <div class="gantt-header border-b-2">Feb 2026</div>
+                <div class="gantt-header border-b-2">Mar 2026</div>
+
+                <!-- Fase 1: Fundamentos y Alineación -->
+                <div class="col-span-full bg-blue-50 p-2 font-bold text-[#003F5C]">Fase 1: Fundamentos y Alineación (El "Porqué")</div>
+                
+                <div class="gantt-task-name">Gestión del Cambio</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 1 / 5;">2 sem</div>
+                </div>
+                
+                <div class="gantt-task-name">Lean y Value Streams</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#EF5675]" style="grid-column: 1 / 5;">2 sem</div>
+                </div>
+                
+                <div class="gantt-task-name">Pensamiento Sistémico</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 5 / 9;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Inteligencia Emocional</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 5 / 9;">2 sem</div>
+                </div>
+
+                <!-- Fase 2: Herramientas de Visualización y Medición -->
+                <div class="col-span-full bg-blue-50 p-2 font-bold text-[#003F5C]">Fase 2: Visualización y Medición (El "Qué")</div>
+
+                <div class="gantt-task-name">Value Stream Mapping (VSM)</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#EF5675]" style="grid-column: 9 / 13;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Accountability</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 13 / 17;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">KPIs, KBIs y OKRs</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#EF5675]" style="grid-column: 13 / 17;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Tiers y Power BI</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#EF5675]" style="grid-column: 17 / 21;">2 sem</div>
+                </div>
+
+                <!-- Fase 3: Mejora Continua y Sostenibilidad -->
+                <div class="col-span-full bg-blue-50 p-2 font-bold text-[#003F5C]">Fase 3: Mejora Continua (El "Cómo")</div>
+
+                <div class="gantt-task-name">Resolución de Problemas</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#EF5675]" style="grid-column: 21 / 25;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Resolución de Conflictos</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 21 / 25;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Eventos Kaizen</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#EF5675]" style="grid-column: 25 / 29;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Facilitación de Reuniones</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 25 / 29;">2 sem</div>
+                </div>
+                
+                <div class="gantt-task-name">Comunicación y Liderazgo</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#7A5195]" style="grid-column: 29 / 33;">2 sem</div>
+                </div>
+
+                <!-- Fase 4: Maestría y Autonomía -->
+                <div class="col-span-full bg-blue-50 p-2 font-bold text-[#003F5C]">Fase 4: Maestría y Autonomía (Avanzado)</div>
+
+                <div class="gantt-task-name">Finanzas para el VS</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#FFA600]" style="grid-column: 33 / 37;">2 sem</div>
+                </div>
+
+                <div class="gantt-task-name">Calidad Integrada</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#FFA600]" style="grid-column: 37 / 41;">2 sem</div>
+                </div>
+                
+                <div class="gantt-task-name">Gestión Ágil (Kanban)</div>
+                <div class="gantt-bar-container">
+                    <div class="gantt-bar bg-[#FFA600]" style="grid-column: 41 / 45;">2 sem</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mt-8 border-t pt-6">
+             <h3 class="text-xl font-bold text-[#003F5C] mb-3">Hitos Clave</h3>
+             <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li><span class="font-semibold">Fin Q4 2025:</span> Todo el personal ha completado la capacitación fundamental y de visualización. Los primeros mapas de flujo de valor (VSM) están completados.</li>
+                <li><span class="font-semibold">Fin Ene 2026:</span> Los equipos operan con reuniones de nivel (Tiers) y han lanzado sus primeros eventos Kaizen.</li>
+                <li><span class="font-semibold">Fin Q1 2026:</span> El plan de capacitación completo ha sido desplegado. Los equipos de Value Stream son funcionalmente autónomos y están equipados para la mejora continua.</li>
+             </ul>
+        </div>
+        
+    </div>
+
+</body>
+</html>
